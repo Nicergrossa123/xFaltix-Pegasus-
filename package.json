@@ -1,0 +1,47 @@
+{
+  "name": "pegasus-launcher",
+  "version": "1.0.3",
+  "description": "Pegasus",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "nodemon --exec electron .",
+    "start": "electron .",
+    "dist": "electron-builder"
+  },
+  "repository": "https://github.com/Nicergrossa123/Pegasus-xFaltix",
+  "publish": {
+    "provider": "github",
+    "releaseType": "release"
+  },
+  "build": {
+    "appId": "com.coderjeet.autoupdater",
+    "productName": "PegasusLauncher",
+    "win": {
+      "target":[ "nsis"], 
+      "icon": "icon.ico"
+      
+    },
+    "nsis": {
+      "oneClick": true,
+      "installerIcon": "icon.ico",
+      "uninstallerIcon": "icon.ico",
+      "uninstallDisplayName": "Pegasus Launcher Uninstaller",
+      "allowToChangeInstallationDirectory": false
+    },
+    "directories": {
+      "output": "dist"
+    }
+  },
+  "author": "Vscript",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^19.0.9",
+    "electron-builder": "^23.6.0",
+    "nodemon": "^2.0.19"
+  },
+  "dependencies": {
+    "axios": "^1.6.8",
+    "electron-updater": "^5.3.0"
+  }
+}

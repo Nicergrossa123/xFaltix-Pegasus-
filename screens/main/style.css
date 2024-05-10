@@ -1,0 +1,22 @@
+:root {
+    --primary: #0c2346;
+    --secondary: #000000ab;
+    --white: #ffffff;
+    --green: #33FF00;
+    --red: #FF0000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    color: var(--white);
+    background-image: url("https://media.discordapp.net/attachments/1234914031165505538/1236403186474942595/bmw-f82-gta-5-4k-i5.png?ex=6637e1b2&is=66369032&hm=867c06df39f0ed4baa5c347175677801022a14edf442f5f9e1141a8c8583a87c&=&format=webp&quality=lossless&width=550&height=306");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}

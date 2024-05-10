@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pegasus Roleplay</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+      body {
+        background-image: url("bmw-f82-gta-5-4k-i5.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Roboto', sans-serif;
+        color: white;
+        position: relative;
+      }
+      
+      #message {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+        font-size: 14px;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-family: inherit;
+      }
+      
+      #player-count {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 14px;
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-family: inherit;
+      }
+      
+      .card-container {
+        background-color: rgba(0, 0, 0, 0.356);
+        border-radius: 5.7rem;
+        width: 25rem;
+        padding: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        align-items: center;
+      }
+
+      .sv_name {
+        cursor: pointer;
+        color: #33b0e5;
+      }
+
+      h1 {
+        font-size: 2.5em;
+        text-align: center;
+      }
+
+      .card-content {
+        display: flex;
+        align-items: center;
+      }
+      .sv-stat {
+        width: 1.3rem;
+        height: 1.3rem;
+        border-radius: 50%;
+        box-shadow: 0px 0px 4px 3px rgba(24, 24, 24, 0.25);
+        margin-right: 10px;
+      }
+      .green-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: green;
+        margin-right: 5px;
+      }
+      .red-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: red;
+        margin-right: 5px;
+      }
+      .card-content p,
+      .card-content span {
+        font-weight: 400;
+        font-size: 1.2em;
+      }
+
+      .card-container {
+        background-color: rgba(0, 0, 0, 0.266);
+        border-radius: 5.7rem;
+        width: 25rem;
+        padding: 1rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .sv-logo {
+        position: absolute;
+        width: 140px;
+        height: 140px;
+        top: 2rem;
+        z-index: 4;
+      }
+      .discord-icon {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        font-size: 24px;
+        color: #FFFFFF;
+        cursor: pointer;
+      }
+      .discord-icon:hover {
+        color: #33b0e5;
+      }
+      .website-icon {
+        position: absolute;
+        bottom: 10px;
+        left: 52px;
+        font-size: 24px;
+        color: #FFFFFF;
+        cursor: pointer;
+      }
+      .website-icon:hover {
+        color: #33b0e5;
+      }
+      .offline-message {
+        color: red;
+        font-size: 1.2em;
+        margin-top: -82px;
+      }
+
+    </style>
+</head>
+<body>
+    <img class="sv-logo" src="./icon.ico">
+    <div class="offline-message"></div>
+    <h1>Pegasus Roleplay</h1>
+    <br />
+  
+    <strong><div id="message">Version loading...</div></strong>
+    <span id="player-count">Player Online: <span id="count">0</span></span> 
+   
+    <div class="card-wrapper" id="cnt">
+        <div class="card-container">
+           
+            <div id="status-dot" class="sv-stat animStatus" defer></div>
+            <span id="sv-name" class="sv-name center-text" defer>Pegasus Roleplay</span>
+            <span style="cursor: pointer; color: #33b0e5;" id="sv-join" class="sv_name" onclick="openServer()">Verbinden</span>
+            
+        </div>
+    </div>
+    
+
+    <a href="https://discord.gg/mtVaq94X" target="_blank">
+        <i class="fab fa-discord discord-icon"></i>
+    </a>
+
+    <a href="https://www.youtube.com/@PegasusRoleplay-fivem" target="_blank">
+        <i class="fab fa-youtube website-icon"></i>
+    </a>
+
+    <script src="./mainView.js" defer></script> 
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" defer></script> 
+</body>
+</html>
